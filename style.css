@@ -1,4 +1,4 @@
-* {
+﻿* {
     box-sizing: border-box;
 }
 
@@ -80,5 +80,62 @@ footer {
 
     nav {
         display: none;
+    }
+}
+
+.lab-panel {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #d0d8dd;
+    border-radius: 0.5rem;
+}
+
+.lab-panel h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+    padding: 0.35rem 0.6rem;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 24rem;
+}
+
+button {
+    margin-top: 0.5rem;
+}
+
+#theme-toggle {
+    margin-inline: 0.5rem;
+}
+
+@media screen {
+    .light-theme {
+        color: #222;
+        background: #f2f5f7;
+    }
+
+    .dark-theme {
+        color: #f2f5f7;
+        background: #161b22;
+    }
+
+    .dark-theme #monument,
+    .dark-theme .lab-panel {
+        background: #222b36;
+        border-color: #566474;
     }
 }

@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пагорб Слави в Черкасах</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
+<body class="light-theme">
     <header>
         <h1>Пагорб Слави в Черкасах</h1>
         <nav>
             <a href="#monument">Про пам’ятник</a>
+            <button id="theme-toggle" type="button" aria-pressed="false">
+                Темна тема
+            </button>
         </nav>
     </header>
 
@@ -19,15 +23,46 @@
             <h2>Монумент «Батьківщина-мати»</h2>
             <p>Монумент розташований на вершині Пагорба Слави.
                 Звідти відкривається краєвид на Кременчуцьке водосховище.</p>
-
             <ul>
                 <li>Місто — Черкаси</li>
                 <li>Адреса — вулиця Слави</li>
                 <li>Тип пам’ятки — меморіальний комплекс</li>
             </ul>
-
             <img src="статуя.jpg"
                  alt="Статуя жінки з піднятою чашею на Пагорбі Слави в Черкасах">
+        </section>
+
+        <section class="lab-panel">
+            <h2>Привітання</h2>
+            <label for="visitor-name">Твоє ім’я</label>
+            <input id="visitor-name" type="text">
+            <p id="greeting" aria-live="polite"></p>
+        </section>
+
+        <section class="lab-panel">
+            <h2>Коментарі</h2>
+            <form id="comment-form">
+                <label for="author">Ім’я автора</label>
+                <input id="author" name="author" required>
+                <label for="comment">Коментар</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <button type="submit">Додати</button>
+            </form>
+            <ul id="comments"></ul>
+        </section>
+
+        <section class="lab-panel">
+            <h2>Завантаження HTML</h2>
+            <button id="load-html" type="button">Завантажити HTML</button>
+            <p id="html-status" role="status"></p>
+            <div id="html-content"></div>
+        </section>
+
+        <section class="lab-panel">
+            <h2>Завантаження JSON</h2>
+            <button id="load-json" type="button">Завантажити JSON</button>
+            <p id="json-status" role="status"></p>
+            <ul id="json-content"></ul>
         </section>
     </main>
 
