@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans 3", Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background: #f2f5f7;
+}
+
+header {
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    background: #233f51;
+}
+
+h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+main {
+    max-width: 48rem;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+#monument {
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #d0d8dd;
+    border-radius: 0.5rem;
+}
+
+#monument h2 {
+    margin-top: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto 0;
+}
+
+footer {
+    padding: 0 1rem 1rem;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    header,
+    #monument {
+        padding: 1rem;
+    }
+}
+
+@media print {
+    body,
+    header {
+        color: black;
+        background: white;
+    }
+
+    nav {
+        display: none;
+    }
+}
